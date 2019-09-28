@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Telepon.dart';
-import 'Profile.dart';
-import 'Login.dart';
+import './laundry/Telepon.dart';
+import './laundry/Shop.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -67,10 +66,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       body: new TabBarView(
         controller: controller,
         children: <Widget>[
-          new Login(),
+          new Shop(),
           new Telepon(),
           new Telepon(),
-          new Profile(),
+          new Telepon(),
         ],
       ),
     );

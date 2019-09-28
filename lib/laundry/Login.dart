@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nav/Profile.dart';
+import './Profile.dart';
 
 class Login extends StatefulWidget {
   static String tag = 'login-page';

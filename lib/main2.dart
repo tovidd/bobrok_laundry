@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nav/Friends.dart';
+import './chat/Friends.dart';
 
 void main()=> runApp(MyApp());
 
