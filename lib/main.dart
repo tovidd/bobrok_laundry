@@ -67,8 +67,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         unselectedLabelStyle: TextStyle(fontSize: 12.0),
         indicator: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter, 
-            end: Alignment.bottomCenter, 
+            begin: Alignment.centerLeft, 
+            end: Alignment.centerRight, 
             stops: [0.01, 0.99],
             colors: <Color>[
               Colors.lightGreenAccent, Colors.lightBlueAccent
@@ -86,7 +86,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           new Telepon(),
         ],
       ),
-      backgroundColor: Colors.yellow[50],
+      backgroundColor: Colors.yellow[100],
     );
 
   }
