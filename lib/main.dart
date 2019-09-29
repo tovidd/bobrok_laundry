@@ -35,8 +35,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.lightGreen,
-        title: new Text("Bobrok Laundry"),
+        backgroundColor: Colors.lightGreenAccent[400],
+        title: new Text("Bobrok Laundry", style: TextStyle(color: Colors.black),),
       ),
       bottomNavigationBar: new TabBar(
         controller: controller,
@@ -59,19 +59,34 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           ),
         ],
         labelColor: Colors.purple,
+        indicatorWeight: 0.0,
+        indicatorSize: TabBarIndicatorSize.tab,
         indicatorColor: Colors.red,
-        unselectedLabelColor: Colors.lightGreen,
+        unselectedLabelColor: Colors.lightGreenAccent[700],
+        labelStyle: TextStyle(fontSize: 16.0),
+        unselectedLabelStyle: TextStyle(fontSize: 12.0),
+        indicator: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter, 
+            end: Alignment.bottomCenter, 
+            stops: [0.01, 0.99],
+            colors: <Color>[
+              Colors.lightGreenAccent, Colors.lightBlueAccent
+            ],
+          ),
+        ),
       ),
 
       body: new TabBarView(
         controller: controller,
         children: <Widget>[
-          new Shop(),
+          new ShopScreen(), 
           new Telepon(),
           new Telepon(),
           new Telepon(),
         ],
       ),
+      backgroundColor: Colors.yellow[50],
     );
 
   }
